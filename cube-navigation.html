@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cube navigation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            width: 400px;
+            height: 60px;
+            margin: 100px auto;
+        }
+  
+        .nav ul{
+            list-style: none;
+            width: 400px;
+            height: 60px;
+
+        }
+        .nav ul li,.nav ul li a,.nav ul li a span{
+            width: 100px;
+            height: 60px;
+                      
+        }
+        .nav ul li{
+            float: left;
+            perspective: 700px;
+        }
+        /* 最终效果中产生变换的是a标签 */
+        .nav ul li a{
+            text-decoration: none;           
+            display: block;
+            transform-style: preserve-3d;
+            transition: all 0.8s;
+            color: rgb(102, 160, 247);
+        }
+        .nav ul li a span{
+            display: block;
+            background-color: rgba(107, 184, 255, 0.7);
+            line-height: 60px;
+            text-align: center;
+            box-shadow: -2px -2px 5px rgb(190, 218, 250);  
+        }
+        /* 形成立体面 */
+        .nav ul li a span:nth-of-type(2){
+            background-color: rgba(255, 192, 203, 0.7);         
+            transform: rotateX(-90deg) translateZ(-30px);
+        }      
+        .nav ul li a span:nth-of-type(1){
+            transform: translateZ(30px);         
+        }
+        /* 鼠标悬停时的旋转效果 */
+        li:hover a{
+            transform: rotateX(90deg);
+        }
+        /* iconfont */
+       .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+       font-size: 26px;
+        }
+
+    </style>
+    <script src="http://at.alicdn.com/t/font_2539292_fp3339bh3e9.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-023-boy"></use>
+                        </svg>
+                    </span>
+                    <span>gentle</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-031-girl"></use>
+                        </svg>
+                    </span>
+                    <span>cool</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-047-boy"></use>
+                        </svg>
+                    </span>
+                    <span>diligent</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-036-girl"></use>
+                        </svg>
+                    </span>
+                    <span>distinctive</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
