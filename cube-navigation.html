@@ -32,7 +32,7 @@
             float: left;
             perspective: 700px;
         }
-        /* 最终效果中产生变换的是a标签 */
+        /* 最终效果中产生变换的是a标签，故3D效果和过渡属性要添加给它 */
         .nav ul li a{
             text-decoration: none;           
             display: block;
@@ -76,6 +76,7 @@
     <div class="nav">
         <ul>
             <li>
+                <!-- a标签用来产生最终的旋转变换效果，span标签用来组成立体面 -->
                 <a href="javascript:;">
                     <span>
                         <svg class="icon" aria-hidden="true">
