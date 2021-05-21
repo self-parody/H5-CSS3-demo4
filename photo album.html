@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除默认样式 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 视距 */
+        body{
+            perspective: 700px;
+        }
+        .box{
+            width: 290px;
+            height: 290px;
+            position: relative;           
+            margin: 200px auto;
+            transform-style: preserve-3d; 
+            animation: rotate 10s linear infinite;           
+        }
+        .box img{
+            position: absolute;
+            width: 100%;
+            height: 100%;           
+            opacity: 0.6;  
+            transition: all 1s;     
+        }
+  
+        /* 旋转动画 */
+        @keyframes rotate{
+            from{
+                transform: rotateX(0) rotateY(0);
+            }
+            to{
+                transform: rotateY(360deg) rotateX(360deg);
+            }
+        }
+      
+        /* 立体样式 */
+        .box img:nth-child(1){
+            transform: translateZ(145px);
+        }
+        .box img:nth-child(2){
+            transform: translateZ(-145px);
+        }
+        .box img:nth-child(3){
+            transform: rotateX(90deg) translateZ(145px);
+        }
+        .box img:nth-child(4){
+            transform: rotateX(90deg) translateZ(-145px);
+        }
+        .box img:nth-child(5){
+            transform: rotateY(-90deg) translateZ(145px);
+        }
+        .box img:nth-child(6){
+            transform: rotateY(90deg) translateZ(145px);
+        }
+        .box img:nth-child(7){
+            transform: translateZ(145px);
+        }
+        .box img:nth-child(8){
+            transform: translateZ(-145px);
+        }
+        .box img:nth-child(9){
+            transform: rotateX(90deg) translateZ(145px);
+        }
+        .box img:nth-child(10){
+            transform: rotateX(90deg) translateZ(-145px);
+        }
+        .box img:nth-child(11){
+            transform: rotateY(-90deg) translateZ(145px);
+        }
+        .box img:nth-child(12){
+            transform: rotateY(90deg) translateZ(145px);
+        }
+      
+        /* 鼠标悬停样式 */
+        .box:hover img:nth-child(7){
+            transform: translateZ(300px);
+        }
+        .box:hover img:nth-child(8){
+            transform: translateZ(-300px);
+        }
+        .box:hover img:nth-child(9){
+            transform: rotateX(90deg) translateZ(300px);
+        }
+        .box:hover img:nth-child(10){
+            transform: rotateX(90deg) translateZ(-300px);
+        }
+        .box:hover img:nth-child(11){
+            transform: rotateY(-90deg) translateZ(300px);
+        }
+        .box:hover img:nth-child(12){
+            transform: rotateY(90deg) translateZ(300px);
+        }  
+    </style>
+</head>
+<body>
+ 
+    <div class="box">
+        <img src="images/方1.jpeg" alt="">
+        <img src="images/方2.jpeg" alt="">
+        <img src="images/方3.jpeg" alt="">
+        <img src="images/方4.jpeg" alt="">
+        <img src="images/方5.jpeg" alt="">
+        <img src="images/方6.jpeg" alt="">
+        <img src="images/方1.jpeg" alt="">
+        <img src="images/方2.jpeg" alt="">
+        <img src="images/方3.jpeg" alt="">
+        <img src="images/方4.jpeg" alt="">
+        <img src="images/方5.jpeg" alt="">
+        <img src="images/方6.jpeg" alt="">
+    </div>
+</body>
+</html>
