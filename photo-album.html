@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
         }
-        /* 视距 */
+        /* 2D视距 */
         body{
             perspective: 700px;
         }
@@ -20,6 +20,7 @@
             height: 290px;
             position: relative;           
             margin: 200px auto;
+            /*3D效果*/
             transform-style: preserve-3d; 
             animation: rotate 10s linear infinite;           
         }
@@ -34,10 +35,10 @@
         /* 旋转动画 */
         @keyframes rotate{
             from{
-                transform: rotateX(0) rotateY(0);
+                transform: rotateX(0) rotateZ(0);
             }
             to{
-                transform: rotateY(360deg) rotateX(360deg);
+                transform: rotateX(360deg) rotateZ(360deg);
             }
         }
       
@@ -52,13 +53,13 @@
             transform: rotateX(90deg) translateZ(145px);
         }
         .box img:nth-child(4){
-            transform: rotateX(90deg) translateZ(-145px);
+            transform: rotateX(-90deg) translateZ(145px);
         }
         .box img:nth-child(5){
-            transform: rotateY(-90deg) translateZ(145px);
+            transform: rotateY(90deg) translateZ(145px);
         }
         .box img:nth-child(6){
-            transform: rotateY(90deg) translateZ(145px);
+            transform: rotateY(-90deg) translateZ(145px);
         }
         .box img:nth-child(7){
             transform: translateZ(145px);
@@ -70,13 +71,13 @@
             transform: rotateX(90deg) translateZ(145px);
         }
         .box img:nth-child(10){
-            transform: rotateX(90deg) translateZ(-145px);
+            transform: rotateX(-90deg) translateZ(145px);
         }
         .box img:nth-child(11){
-            transform: rotateY(-90deg) translateZ(145px);
+            transform: rotateY(90deg) translateZ(145px);
         }
         .box img:nth-child(12){
-            transform: rotateY(90deg) translateZ(145px);
+            transform: rotateY(-90deg) translateZ(145px);
         }
       
         /* 鼠标悬停样式 */
@@ -90,13 +91,13 @@
             transform: rotateX(90deg) translateZ(300px);
         }
         .box:hover img:nth-child(10){
-            transform: rotateX(90deg) translateZ(-300px);
+            transform: rotateX(-90deg) translateZ(300px);
         }
         .box:hover img:nth-child(11){
-            transform: rotateY(-90deg) translateZ(300px);
+            transform: rotateY(90deg) translateZ(300px);
         }
         .box:hover img:nth-child(12){
-            transform: rotateY(90deg) translateZ(300px);
+            transform: rotateY(-90deg) translateZ(300px);
         }  
     </style>
 </head>
